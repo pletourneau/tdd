@@ -14,14 +14,14 @@ function wordCounter(text) {
 }
 
 function wordFilter(text) {
-  if (text.includes("zoinks")) {
-      return text.replaceAll("zoinks", "");
-  } else if (text.includes("muppeteer")) {
-      return text.replaceAll("muppeteer", "");
-  } else if (text.includes("biffaroni")) {
-      return text.replaceAll("biffaroni", "");
-  } else if (text.includes("loopdaloop")) {
-      return text.replaceAll("loopdaloop", "");
+  if (text.toLowerCase().includes("zoinks")) {
+      return text.toLowerCase().replaceAll("zoinks", "");
+  } else if (text.toLowerCase().includes("muppeteer")) {
+      return text.toLowerCase().replaceAll("muppeteer", "");
+  } else if (text.toLowerCase().includes("biffaroni")) {
+      return text.toLowerCase().replaceAll("biffaroni", "");
+  } else if (text.toLowerCase().includes("loopdaloop")) {
+      return text.toLowerCase().replaceAll("loopdaloop", "");
   } 
   return text;
 }

@@ -31,29 +31,29 @@ Test: "It should not count numbers as words."
 Code: wordCounter("hi there 77 19");
 Expected Output: 2
 
-Test: "It should omit offensive words."
+Test: "It should omit the word 'zoinks'."
 Code: wordFilter("zoinks")
-Excpected: Output: 0
+Expected Output: ""
 
-Test: "It should omit offensive words."
+Test: "It should omit the word 'muppeteer'."
 Code: wordFilter("muppeteer")
-Excpected: Output: 0
+Expected Output: ""
 
-Test: "It should omit offensive words."
+Test: "It should omit the word 'biffaroni'."
 Code: wordFilter("biffaroni")
-Expected Output: 0
+Expected Output: ""
 
-Test: "It should omit offensive words."
+Test: "It should omit the word 'loopdaloop'."
 Code: wordFilter("loopdaloop")
-Expected Output: 0
+Expected Output: ""
 
 Test: "It should omit offensive words. Even when entered twice"
 Code: wordFilter("loopdaloop loopdaloop")
-Expected Output: 0
+Expected Output: ""
 
-Test: "It should omit offensive words and remove extra spacing"
-Code: wordFilter("sentence loopdaloop word")
-Expected Output: 0
+Test: "It should omit all the offensive words even when they have different capitalizations"
+Code: wordFilter("sentence LooPdaloop word")
+Expected Output: "sentence  word"
 
 ## Technologies Used
 
