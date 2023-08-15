@@ -4,6 +4,57 @@
 
 #### _{Brief description of application}_
 
+## TDD
+Describe: wordCounter()
+
+Test: "It should return 1 if a passage has just one word."
+Code:
+const text = "hello";
+wordCounter(text);
+Expected Output: 1
+
+Test: "It should return 2 if a passage has two words."
+Code:
+const text = "hello there";
+wordCounter(text);
+Expected Output: 2
+
+Test: "It should return 0 for an empty string."
+Code: wordCounter("");
+Expected Output: 0
+
+Test: "It should return 0 for a string that is only spaces."
+Code: wordCounter("            ");
+Expected Output: 0
+
+Test: "It should not count numbers as words."
+Code: wordCounter("hi there 77 19");
+Expected Output: 2
+
+Test: "It should omit offensive words."
+Code: wordFilter("zoinks")
+Excpected: Output: 0
+
+Test: "It should omit offensive words."
+Code: wordFilter("muppeteer")
+Excpected: Output: 0
+
+Test: "It should omit offensive words."
+Code: wordFilter("biffaroni")
+Expected Output: 0
+
+Test: "It should omit offensive words."
+Code: wordFilter("loopdaloop")
+Expected Output: 0
+
+Test: "It should omit offensive words. Even when entered twice"
+Code: wordFilter("loopdaloop loopdaloop")
+Expected Output: 0
+
+Test: "It should omit offensive words and remove extra spacing"
+Code: wordFilter("sentence loopdaloop word")
+Expected Output: 0
+
 ## Technologies Used
 
 * _List all_
