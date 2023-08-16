@@ -105,6 +105,12 @@ const text = "Hi there hey yo hi hi yay yo whoa there whoa yay";
 mostCommonWords(text);
 Expected Output: ["hi", "there", "hey", "yo", "hi"];
 
+Test: " count number of instances of 'text' in the array "
+Code:
+const text = "Hi there hey yo hi hi yay yo whoa there whoa yay";
+
+Expected Output: ["hi", "there", "hey", "yo", "hi"];
+
 ## Technologies Used
 
 * _List all_
