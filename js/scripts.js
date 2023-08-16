@@ -47,9 +47,8 @@ function numberOfOccurrencesInText(word, text) {
 }
 
 
-
 //UI Logic
-function handleFormSubmission(event) {
+function handleFormSubmission() {
   event.preventDefault();
   const passage = document.getElementById("text-passage").value;
   const word = document.getElementById("word").value;
@@ -57,7 +56,14 @@ function handleFormSubmission(event) {
   const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
   document.getElementById("total-count").innerText = wordCount;
   document.getElementById("selected-count").innerText = occurrencesOfWord;
+  let boldedPassage = boldPassage(word, passage);
+  if (boldedPassage) {
+    document.querySelector("div#bolded-passage").append(boldedPassage);
+  } else {
+    document.querySelector("div#bolded-passage").innerText = null;
+  }
 }
+
 
 function boldPassage(word, text) {
   if (isEmpty(word) || isEmpty(text)) {

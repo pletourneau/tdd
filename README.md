@@ -97,6 +97,14 @@ const text = "hello there";
 boldPassage(word, text);
 Expected Output: <p><strong>hello</strong> there</p>
 
+Describe: mostCommonWords()
+
+Test: "It should take a string, and return an array with each word as a separate element."
+Code:
+const text = "Hi there hey yo hi hi yay yo whoa there whoa yay";
+mostCommonWords(text);
+Expected Output: ["hi", "there", "hey", "yo", "hi"];
+
 ## Technologies Used
 
 * _List all_
